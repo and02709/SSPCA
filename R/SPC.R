@@ -1,0 +1,123 @@
+# This function computes supervised principal component analysis.  It obtains
+#   the eigenevectors from the HSIC criterion and encodes the training and
+#   testing data
+# @param ytrain training response dataset
+# @param xtrain training predictor dataset
+# @param ytest testing response dataset
+# @param xtest testing predictor dataset
+# @param ycont flag indicates response data is continuous
+# @param ybinary flag indicates response data is binary
+# @param nresp number of response vectors present in datasets
+# @param strictEV flag whether to impose strict requiresments to accept number
+#   of eigenevectors or to select a more appropriate number
+# @param nTopEvecs number of desired eigenevectors
+
+
+SPC <- function(ytrain, xtrain, ytest, xtest, ycont, ybinary, nresp, strictEV, nTopEvecs){
+  
+  # converts training data into a matrix form
+  nobs <- nrow(as.matrix(ytrain))
+  # if response is continuous, use the yy^t kernel
+  if(ycont){
+    L <- as.matrix(ytrain)%*%t(as.matrix(ytrain))
+  }
+  
+  # if response is binary, use the delta kernel
+  if(!ycont && ybinary){
+    
+    yf <- recPack(ytrain=ytrain)
+    yf <- as.factor(yf)
+    L<-matrix(0,nobs,nobs)
+    for (i in levels(yf)){
+      tmp<-yf==i
+      L[tmp,tmp]<-1
+    }
+  }
+  
+  # this produces a kernel matrix for categorical data, but only one vector
+  #   cannot handle more than one categories  
+  if(!ycont && !ybinary){
+    if(nresp>1) stop("Cannot transform multivariable responses with categorical variables into response kernel")
+    yf <- as.factor(ytrain)
+    L<-matrix(0,nobs,nobs)
+    for (i in levels(yf)){
+      tmp<-yf==i
+      L[tmp,tmp]<-1
+    }
+  }
+  
+  #if(improper.Y.Binary && !ycont && ybinary){
+  #  L <- as.matrix(ytrain)%*%t(as.matrix(ytrain))
+  #}
+  
+  
+  # generate identity matrix that has dimensions equal to the training set
+  I <- diag(nrow=nobs)
+  # generate vector of 1's with length of the training set
+  e <- rep(1, nobs)
+  # generate square matrix of 1's with dimension of the training set
+  H <- I -(1/nobs)*e%*%t(e)
+  # generate the X matrix
+  X <- as.matrix(xtrain)
+  # generate centered matrix of kernel structure coupled with response matrix
+  Q <- t(X)%*%H%*%L%*%H%*%X
+  # Eigen decomposition of Q matrix
+  Utotal <- eigen(Q, only.values=F)
+  # This object stores the eigenvalues
+  Uval <- Utotal$values
+  # This object stores the eigenvectors
+  Uvec <- Utotal$vectors
+  
+  # Some of the eigenvalues and eigenvectors may be complex if the
+  #   resulting Q matrix has values approaching zero.  Therefore, 
+  #   we must remove the complex component or future operations will not work
+  if(is.complex(Uval)){
+    Uval <- Re(Uval)
+    Uvec <- Re(Uvec)
+  }
+  
+  # if a strict number of eigenvectors is desired, this will select that number
+  #   of eigenevectors from the decomposition
+  if(strictEV){
+    #zapUval <- zapsmall(Uval)
+    Uvalues <- Uval[1:nTopEvecs]
+    Uvectors <- Uvec[,1:nTopEvecs]
+    numvec <- length(Uvalues)
+    
+  }
+  
+  # This identifies non-zero eigenevalues and selects the corresponding
+  else{
+    zapUval <- zapsmall(Uval)
+    ntake <- sum(zapUval > 0)
+    numvec <- 0
+    
+    if(ntake==1 || ntake < nTopEvecs){
+      Indec <- which(zapUval>0)
+      numvec <- length(Indec)
+      
+      if(ntake>0){
+        Uvalues <- zapUval[Indec]
+        Uvectors <- Uvec[,Indec]
+      }
+    }
+    else{
+      Uvalues <- zapUval[1:nTopEvecs]
+      Uvectors <- Uvec[,1:nTopEvecs]
+      numvec <- length(Uvalues)
+    }
+    
+  }
+  
+  
+  # This code addresses the circumstance that no eigenvectors are found
+  if(numvec==0) stop("No eigenvalues greater than 0")
+  
+  # Encode Training Data
+  Ztrain <- t(t(Uvectors)%*%t(X))
+  # Encode Testing Data
+  Ztest <- t(t(Uvectors)%*%t(as.matrix(xtest)))
+  
+  return(list(Z=Ztrain, z=Ztest, U=Uvectors, lambda=Uval))
+  
+}
