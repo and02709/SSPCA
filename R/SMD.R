@@ -18,6 +18,11 @@
 #   loadings to correspond to the parallel maxima using pmax
 # @param vneg allows the option to force the vector corresponding to 
 #   loadings to correspond to the parallel minima using pmin
+# @keywords 
+# @export
+# @examples SMD(x, sumabsu, sumabsv, niter=20,trace=TRUE, v, upos, uneg, vpos, vneg)
+
+
 
 # Function accepts the matrix x to decompose and employs sparseness using
 #   L1 penalty on the vectors corresponding the loadings

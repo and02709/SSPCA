@@ -29,6 +29,12 @@
 # @param compute.pve no longer useful
 # @param strictEV determines whether the specified K must be strictly followed
 #   or whether a more appropriate number of vectors can be used
+# @keywords 
+# @export
+# @examples SSPC(xtrain, ytrain, xtest, ycont, ybinary, nresp, sumabsv=4, 
+#   niter=20, K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, cnames=NULL, 
+#   vpos=FALSE, vneg=FALSE, compute.pve=TRUE, strictEV=TRUE)
+
 
 # Function accepts the training and testing predictor datasets and the
 #   training response datasets

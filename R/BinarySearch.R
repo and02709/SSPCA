@@ -3,6 +3,10 @@
 # and determines the level of shrinkage possible to meet the sparse penalty
 # @param argu This is the eigenvector to undergo l1 penalization
 # @param sumabs This is the sparse penalty 
+# @keywords 
+# @export
+# @examples
+# BinarySearch(argu,sumabs)
 
 # The input parameters argu and sumabs that represent the eigenvector and
 #   sparse penalty

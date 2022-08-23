@@ -1,4 +1,11 @@
-
+# This function provides visualization for the responses
+# @param TrTs this contains the fitted/predicted responses
+# @param sepAnalysis tells whether the eigenvectors should be displayed separately
+# @param nresp number of response vectors present in datasets
+# @param resp.names gives list of names for each response
+# @keywords 
+# @export
+# @examples densplotSq(TrTs, nresp, resp.names)
 
 densplotSq <- function(TrTs, nresp, resp.names){
   y.hat.train <- TrTs[[1]]

@@ -1,7 +1,52 @@
-# This function encompasses all possible options used for conducting SPCA and
-#   sparse SPCA.  This includes generation of the eigenvectors, encoding of
-#   of the data, performance metrics, and several visualization options
-
+#' This function provides all options for analysis using SSPCA
+#' @param xtrain training predictor dataset
+#' @param ytrain training response dataset
+#' @param xtest testing predictor dataset
+#' @param ytest testing response dataset
+#' @param resp.names parameter containing response names
+#' @param ycont flag indicates response data is continuous
+#' @param ybinary flags for whether response is binary
+#' @param sepAnalysis flag for whether analysis should be performed separately for
+#'   each response
+#' @param K number of eigenevectors allowed to be calculated
+#' @param sumabsv causes shrinkage to occur to the loadings
+#' @param strictEV flag whether to impose strict requiresments to accept number
+#'   of eigenevectors or to select a more appropriate number
+#' @param Sens.analysis not currently supported
+#' @param not currently supported
+#' @param binClassCombine not currently support
+#' @param NoExtraEV unknown function
+#' @param ydensity calculates density plot
+#' @param dpyhat calculates y hat plot
+#' @param dsq calculates squared error plot
+#' @param qqplot generates qqplot
+#' @param opplot calculates observed vs predicted plot
+#' @param Evec.plot generates eigenevector plot
+#' @param manhattan.plot generates basic manhattan plot
+#' @param cifti.man.plot generates cifti specific manhattan plot
+#' @param man.thresh visual horizontal bar for manhattan plot
+#' @param nresp number of response vectors present in datasets
+#' @param niter number of iterations
+#' @param orth determines whether orthogonal vectors are required
+#' @param trace this allows debugging
+#' @param v focuses on the loadings vector
+#' @param center this centers the predictor columns
+#' @param test_metrics flag for calculating test metrics
+#' @param cnames this gives column names
+#' @param vpos this determines whether the matrix is to be positive only
+#' @param vneg this determines whether the matrix is to be negative only
+#' @param compute.pve computes cv using missing values
+#' @keywords 
+#' @export
+#' @examples OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, 
+#'   ycont=T, ybinary=F, sepAnalysis = F, 
+#'   K=1, sumabsv=0, strictEV=T, Sens.analysis=F,
+#'   sepclass=T, binClassCombine=F, NoExtraEV = F, ydensity=F,
+#'   dpyhat=F, dsq=F, qqplot=F, opplot=F, 
+#'   Evec.plot = F, manhattan.plot=F, cifti.man.plot=F, 
+#'   man.thresh = 0, niter=20, orth=TRUE, 
+#'   trace=TRUE, v=NULL, center=TRUE, test_metrics=T,
+#'   cnames=NULL, vpos=FALSE, vneg=FALSE, compute.pve=TRUE)
 
 
 OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, ybinary=F, sepAnalysis = F, 

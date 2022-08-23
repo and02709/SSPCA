@@ -5,6 +5,10 @@
 # @param v proposed eigenvectors.  Usually set to NULL
 # @param x matrix to extract eigenvectors
 # @param K number of desired eigenvectors
+# @keywords
+# @export
+# @examples
+# CheckPMDV(v,x,K)
 
 
 # Normally accepts the v eigenvector of loadings, x input matrix, and number

@@ -1,4 +1,12 @@
-
+# This function provides basic manhattan plots for the loadings of each eigenvector
+#   provided to the function.
+# @param Zlist this contains the eigenvectors
+# @param sepAnalysis tells whether the eigenvectors should be displayed separately
+# @param nresp number of response vectors present in datasets
+# @param resp.names gives list of names for each response
+# @keywords 
+# @export
+# @examples ManPlot(Zlist, sepAnalysis, nresp, man.thresh, resp.names)
 
 ManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names){
   if(sepAnalysis){

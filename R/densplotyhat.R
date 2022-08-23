@@ -1,3 +1,11 @@
+# This function provides visualization for the responses
+# @param y_hat this contains the fitted/predicted responses
+# @param nresp number of response vectors present in datasets
+# @param resp.names gives list of names for each response
+# @keywords 
+# @export
+# @examples densplotyhat(y_hat, nresp, resp.names)
+
 densplotyhat<- function(y_hat, nresp, resp.names){
   y.hat.train <- y_hat[[1]]
   y.hat.test <- y_hat[[2]]

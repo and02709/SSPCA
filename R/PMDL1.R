@@ -27,6 +27,12 @@
 #   loadings to correspond to the parallel maxima using pmax
 # @param vneg allows the option to force the vector corresponding to 
 #   loadings to correspond to the parallel minima using pmin
+# @keywords 
+# @export
+# @examples PMDL1(x,sumabs=.4,sumabsu=NULL,sumabsv=NULL,niter=20,
+#   K=1,v=NULL, trace=TRUE, orth=TRUE, center=TRUE, rnames=NULL, cnames=NULL, 
+#   upos=upos, uneg=uneg, vpos=vpos, vneg=vneg)
+
 
 # Function accepts the matrix x to decompose and employs sparseness using
 #   L1 penalty on the vectors corresponding the loadings

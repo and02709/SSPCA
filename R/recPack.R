@@ -1,5 +1,9 @@
 # This function assigns a category based on binary response permutation
 # @param ytrain accepts matrix of response variables
+# @keywords
+# @export
+# @examples
+# recPack(ytrain)
 
 # Function accepts ytrain matrix of response variables
 recPack <- function(ytrain){

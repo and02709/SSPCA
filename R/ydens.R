@@ -1,4 +1,12 @@
-
+# This function provides visualization for the responses.
+# @param ytrain training response dataset
+# @param ytest testing response dataset
+# @param sepAnalysis tells whether the eigenvectors should be displayed separately
+# @param nresp number of response vectors present in datasets
+# @param resp.names gives list of names for each response
+# @keywords 
+# @export
+# @examples ydens(ytrain, ytest, nresp, resp.names)
 
 ydens<- function(ytrain, ytest, nresp, resp.names){
   

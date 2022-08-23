@@ -1,3 +1,14 @@
+# This function calculates binary predictions for binary response data.
+# @param ytrain training response dataset
+# @param ytest testing response dataset
+# @param Z encoded pca responses
+# @param nresp number of response vectors present in datasets
+# @param resp.names gives list of names for each response
+# @keywords 
+# @export
+# @examples GLMbinSep(ytrain, ytest, Z, nresp, resp.names)
+
+
 GLMbinSep <- function(ytrain, ytest, Z, nresp, resp.names){
   
   y_hat_train <- matrix(0, nrow=dim(as.matrix(ytrain))[1], ncol=dim(as.matrix(ytrain))[2])

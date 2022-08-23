@@ -11,6 +11,10 @@
 # @param strictEV flag whether to impose strict requiresments to accept number
 #   of eigenevectors or to select a more appropriate number
 # @param nTopEvecs number of desired eigenevectors
+# @keywords 
+# @export
+# @examples SPC(ytrain, xtrain, ytest, xtest, ycont, ybinary, nresp, strictEV, nTopEvecs)
+
 
 
 SPC <- function(ytrain, xtrain, ytest, xtest, ycont, ybinary, nresp, strictEV, nTopEvecs){
