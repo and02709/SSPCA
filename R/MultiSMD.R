@@ -1,27 +1,27 @@
-# This function decomposes a matrix using singular value decomposition ad uses
-#   the SMD function.  This results in vectors corresponding to the loadings
-#   which have undergone shrinkage
-# @param x this is the matrix which is decomposed and the decomposition vectors
-#   corresponding to the loadings are shrunk
-# @param sumabsu this parameter determines by how much the decomposition vectors
-#   corresponding to the observations
-# @param sumabsv this parameter determines by how much the decomposition vectors
-#   corresponding to the loadings
-# @param K determines how many vectors should be calculated
-# @param niter number of iterations to allow for convergence
-# @param v allows a particular v matrix to be passed to the SMD function
-# @param trace option to deisplay potential warnings
-# @param upos allows the option to force the vector corresponding to 
-#   observations to correspond to the parallel maxima using pmax
-# @param uneg allows the option to force the vector corresponding to 
-#   observations to correspond to the parallel minima using pmin
-# @param vpos allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel maxima using pmax
-# @param vneg allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel minima using pmin
-# @keywords 
-# @export
-# @examples MultiSMD(x, sumabsu, sumabsv, K=3, niter=20,v, trace=TRUE, upos, uneg, vpos, vneg)
+#' This function decomposes a matrix using singular value decomposition ad uses
+#'   the SMD function.  This results in vectors corresponding to the loadings
+#'   which have undergone shrinkage
+#' @param x this is the matrix which is decomposed and the decomposition vectors
+#'   corresponding to the loadings are shrunk
+#' @param sumabsu this parameter determines by how much the decomposition vectors
+#'   corresponding to the observations
+#' @param sumabsv this parameter determines by how much the decomposition vectors
+#'   corresponding to the loadings
+#' @param K determines how many vectors should be calculated
+#' @param niter number of iterations to allow for convergence
+#' @param v allows a particular v matrix to be passed to the SMD function
+#' @param trace option to deisplay potential warnings
+#' @param upos allows the option to force the vector corresponding to 
+#'   observations to correspond to the parallel maxima using pmax
+#' @param uneg allows the option to force the vector corresponding to 
+#'   observations to correspond to the parallel minima using pmin
+#' @param vpos allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel maxima using pmax
+#' @param vneg allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel minima using pmin
+#' @keywords 
+#' @export
+#' @examples MultiSMD(x, sumabsu, sumabsv, K=3, niter=20,v, trace=TRUE, upos, uneg, vpos, vneg)
 
 
 # Function accepts the matrix x to decompose and employs sparseness using

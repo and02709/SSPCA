@@ -1,13 +1,13 @@
-# This function calculates predictions for each binary response using all
-#   eigenvectors together.
-# @param ytrain training response dataset
-# @param ztrain encoded training data
-# @param ytest testing response dataset
-# @param ztest encoded testing data
-# @param nresp number of response vectors present in datasets
-# @keywords 
-# @export
-# @examples GLMbin(ytrain, ztrain, ytest, ztest, nresp)
+#' This function calculates predictions for each binary response using all
+#'   eigenvectors together.
+#' @param ytrain training response dataset
+#' @param ztrain encoded training data
+#' @param ytest testing response dataset
+#' @param ztest encoded testing data
+#' @param nresp number of response vectors present in datasets
+#' @keywords 
+#' @export
+#' @examples GLMbin(ytrain, ztrain, ytest, ztest, nresp)
 
 GLMbin <- function(ytrain, ztrain, ytest, ztest, nresp){
   

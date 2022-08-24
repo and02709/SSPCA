@@ -1,12 +1,12 @@
-# This function calculates yhat for each continuous response separately.
-# @param ytrain training response dataset
-# @param ytest testing response dataset
-# @param Z encoded pca responses
-# @param nresp number of response vectors present in datasets
-# @param resp.names gives list of names for each response
-# @keywords 
-# @export
-# @examples LMcontSep(ytrain, ytest, Z, nresp, resp.names)
+#' This function calculates yhat for each continuous response separately.
+#' @param ytrain training response dataset
+#' @param ytest testing response dataset
+#' @param Z encoded pca responses
+#' @param nresp number of response vectors present in datasets
+#' @param resp.names gives list of names for each response
+#' @keywords 
+#' @export
+#' @examples LMcontSep(ytrain, ytest, Z, nresp, resp.names)
 
 LMcontSep <- function(ytrain, ytest, Z, nresp, resp.names){
   

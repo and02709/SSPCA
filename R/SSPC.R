@@ -1,39 +1,39 @@
-# This function supervises the decomposition of the matrix X into vectors
-#   corresponding to the observations and sparse vectors corresponding to 
-#   the loadings.  It handles all operations with getting the desired
-#   eigenvectors, and encodes the data.  This information is passed
-#   to subsequent functions
-# @param xtrain training predictor dataset
-# @param ytrain training response dataset
-# @param xtest testing predictor dataset
-# @param ycont flag for whether the response data is continuous
-# @param ybinary flag for whether the response data is binary
-# @param nresp number of response vectors in the training response dataset
-# @param sumabsv this parameter determines by how much the decomposition vectors
-#   corresponding to the loadings
-# @param niter number of iterations to allow for convergence
-# @param K determines how many vectors should be calculated
-# @param v allows a particular v matrix to be passed to PMDL1
-# @param trace option to deisplay potential warnings
-# @param center this tells the algorithm whether centering is required
-#   this has been handled in other programs so has been disabled
-# @param cnames gives potential column names
-# @param upos allows the option to force the vector corresponding to 
-#   observations to correspond to the parallel maxima using pmax
-# @param uneg allows the option to force the vector corresponding to 
-#   observations to correspond to the parallel minima using pmin
-# @param vpos allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel maxima using pmax
-# @param vneg allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel minima using pmin
-# @param compute.pve no longer useful
-# @param strictEV determines whether the specified K must be strictly followed
-#   or whether a more appropriate number of vectors can be used
-# @keywords 
-# @export
-# @examples SSPC(xtrain, ytrain, xtest, ycont, ybinary, nresp, sumabsv=4, 
-#   niter=20, K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, cnames=NULL, 
-#   vpos=FALSE, vneg=FALSE, compute.pve=TRUE, strictEV=TRUE)
+#' This function supervises the decomposition of the matrix X into vectors
+#'   corresponding to the observations and sparse vectors corresponding to 
+#'   the loadings.  It handles all operations with getting the desired
+#'   eigenvectors, and encodes the data.  This information is passed
+#'   to subsequent functions
+#' @param xtrain training predictor dataset
+#' @param ytrain training response dataset
+#' @param xtest testing predictor dataset
+#' @param ycont flag for whether the response data is continuous
+#' @param ybinary flag for whether the response data is binary
+#' @param nresp number of response vectors in the training response dataset
+#' @param sumabsv this parameter determines by how much the decomposition vectors
+#'   corresponding to the loadings
+#' @param niter number of iterations to allow for convergence
+#' @param K determines how many vectors should be calculated
+#' @param v allows a particular v matrix to be passed to PMDL1
+#' @param trace option to deisplay potential warnings
+#' @param center this tells the algorithm whether centering is required
+#'   this has been handled in other programs so has been disabled
+#' @param cnames gives potential column names
+#' @param upos allows the option to force the vector corresponding to 
+#'   observations to correspond to the parallel maxima using pmax
+#' @param uneg allows the option to force the vector corresponding to 
+#'   observations to correspond to the parallel minima using pmin
+#' @param vpos allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel maxima using pmax
+#' @param vneg allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel minima using pmin
+#' @param compute.pve no longer useful
+#' @param strictEV determines whether the specified K must be strictly followed
+#'   or whether a more appropriate number of vectors can be used
+#' @keywords 
+#' @export
+#' @examples SSPC(xtrain, ytrain, xtest, ycont, ybinary, nresp, sumabsv=4, 
+#'   niter=20, K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, cnames=NULL, 
+#'   vpos=FALSE, vneg=FALSE, compute.pve=TRUE, strictEV=TRUE)
 
 
 # Function accepts the training and testing predictor datasets and the

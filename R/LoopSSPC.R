@@ -1,31 +1,31 @@
-# This function cycles through each response and computes supervised principal
-#     component analysis eigenvectors.  This is caused by doing separate analysis.
-#     This invokes the SSPCA function to compute sparse eigenevectors
-#     for each response.
-# @param xtrain training predictor dataset
-# @param ytrain training response dataset
-# @param xtest testing predictor dataset
-# @param ycont flag indicates response data is continuous
-# @param nresp number of response vectors present in datasets
-# @param sumabsv causes shrinkage to occur to the loadings
-# @param niter the number of iterations allowed to achieve convergence
-# @param K number of eigenevectors allowed to be calculated
-# @param orth determines whether orthogonal vectors are required
-# @param trace this allows debugging
-# @param v focuses on the loadings vector
-# @param center this centers the predictor columns
-# @param cnames this gives column names
-# @param vpos this determines whether the matrix is to be positive only
-# @param vneg this determines whether the matrix is to be negative only
-# @param compute.pve computes cv using missing values
-# @param strictEV flag whether to impose strict requiresments to accept number
-#   of eigenevectors or to select a more appropriate number
-# @keywords 
-# @export
-# @examples LoopSSPC(xtrain, ytrain, xtest, ycont, nresp, sumabsv=4, niter=20, 
-#   K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, 
-#   cnames=NULL, vpos=FALSE, vneg=FALSE, compute.pve=TRUE, 
-#   strictEV=TRUE)
+#' This function cycles through each response and computes supervised principal
+#'     component analysis eigenvectors.  This is caused by doing separate analysis.
+#'     This invokes the SSPCA function to compute sparse eigenevectors
+#'     for each response.
+#' @param xtrain training predictor dataset
+#' @param ytrain training response dataset
+#' @param xtest testing predictor dataset
+#' @param ycont flag indicates response data is continuous
+#' @param nresp number of response vectors present in datasets
+#' @param sumabsv causes shrinkage to occur to the loadings
+#' @param niter the number of iterations allowed to achieve convergence
+#' @param K number of eigenevectors allowed to be calculated
+#' @param orth determines whether orthogonal vectors are required
+#' @param trace this allows debugging
+#' @param v focuses on the loadings vector
+#' @param center this centers the predictor columns
+#' @param cnames this gives column names
+#' @param vpos this determines whether the matrix is to be positive only
+#' @param vneg this determines whether the matrix is to be negative only
+#' @param compute.pve computes cv using missing values
+#' @param strictEV flag whether to impose strict requiresments to accept number
+#'   of eigenevectors or to select a more appropriate number
+#' @keywords 
+#' @export
+#' @examples LoopSSPC(xtrain, ytrain, xtest, ycont, nresp, sumabsv=4, niter=20, 
+#'   K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, 
+#'   cnames=NULL, vpos=FALSE, vneg=FALSE, compute.pve=TRUE, 
+#'   strictEV=TRUE)
 
 LoopSSPC <- function(xtrain, ytrain, xtest, ycont, nresp, sumabsv=4, niter=20, 
                      K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, 

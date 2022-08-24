@@ -1,12 +1,12 @@
-# A function that calculates the maximum shrinkage for a given sparse penalty
-# This function examines te maximum elements of the eigenvector
-# and determines the level of shrinkage possible to meet the sparse penalty
-# @param argu This is the eigenvector to undergo l1 penalization
-# @param sumabs This is the sparse penalty 
-# @keywords 
-# @export
-# @examples
-# BinarySearch(argu,sumabs)
+#' A function that calculates the maximum shrinkage for a given sparse penalty
+#' This function examines te maximum elements of the eigenvector
+#' and determines the level of shrinkage possible to meet the sparse penalty
+#' @param argu This is the eigenvector to undergo l1 penalization
+#' @param sumabs This is the sparse penalty 
+#' @keywords 
+#' @export
+#' @examples
+#' BinarySearch(argu,sumabs)
 
 # The input parameters argu and sumabs that represent the eigenvector and
 #   sparse penalty

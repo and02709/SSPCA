@@ -1,37 +1,37 @@
-# This function supervises the decomposition of the matrix X into vectors
-#   corresponding to the observations and sparse vectors corresponding to 
-#   the loadings
-# @param x this is the matrix which is decomposed and the decomposition vectors
-#   corresponding to the loadings are shrunk
-# @param sumabsu this parameter determines by how much the decomposition vectors
-#   corresponding to the observations
-# @param sumabsv this parameter determines by how much the decomposition vectors
-#   corresponding to the loadings
-# @param niter number of iterations to allow for convergence
-# @param K determines how many vectors should be calculated
-# @param v allows a particular v matrix to be passed to the MultiSMD and
-#   MultiSMDOrth functions.  Its default is set to null because
-#   CheckPMDV is called in this function
-# @param trace option to deisplay potential warnings
-# @paaram orth specifies that MultiSMDOrth is to be called for any number of 
-#   vectors that is greater than 1
-# @param center this tells the algorithm whether centering is required
-#   this has been handled in other programs so has been disabled
-# @param rnames gives potential row names
-# @param cnames gives potential column names
-# @param upos allows the option to force the vector corresponding to 
-#   observations to correspond to the parallel maxima using pmax
-# @param uneg allows the option to force the vector corresponding to 
-#   observations to correspond to the parallel minima using pmin
-# @param vpos allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel maxima using pmax
-# @param vneg allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel minima using pmin
-# @keywords 
-# @export
-# @examples PMDL1(x,sumabs=.4,sumabsu=NULL,sumabsv=NULL,niter=20,
-#   K=1,v=NULL, trace=TRUE, orth=TRUE, center=TRUE, rnames=NULL, cnames=NULL, 
-#   upos=upos, uneg=uneg, vpos=vpos, vneg=vneg)
+#' This function supervises the decomposition of the matrix X into vectors
+#'   corresponding to the observations and sparse vectors corresponding to 
+#'   the loadings
+#' @param x this is the matrix which is decomposed and the decomposition vectors
+#'   corresponding to the loadings are shrunk
+#' @param sumabsu this parameter determines by how much the decomposition vectors
+#'   corresponding to the observations
+#' @param sumabsv this parameter determines by how much the decomposition vectors
+#'   corresponding to the loadings
+#' @param niter number of iterations to allow for convergence
+#' @param K determines how many vectors should be calculated
+#' @param v allows a particular v matrix to be passed to the MultiSMD and
+#'   MultiSMDOrth functions.  Its default is set to null because
+#'   CheckPMDV is called in this function
+#' @param trace option to deisplay potential warnings
+#' @paaram orth specifies that MultiSMDOrth is to be called for any number of 
+#'   vectors that is greater than 1
+#' @param center this tells the algorithm whether centering is required
+#'   this has been handled in other programs so has been disabled
+#' @param rnames gives potential row names
+#' @param cnames gives potential column names
+#' @param upos allows the option to force the vector corresponding to 
+#'   observations to correspond to the parallel maxima using pmax
+#' @param uneg allows the option to force the vector corresponding to 
+#'   observations to correspond to the parallel minima using pmin
+#' @param vpos allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel maxima using pmax
+#' @param vneg allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel minima using pmin
+#' @keywords 
+#' @export
+#' @examples PMDL1(x,sumabs=.4,sumabsu=NULL,sumabsv=NULL,niter=20,
+#'   K=1,v=NULL, trace=TRUE, orth=TRUE, center=TRUE, rnames=NULL, cnames=NULL, 
+#'   upos=upos, uneg=uneg, vpos=vpos, vneg=vneg)
 
 
 # Function accepts the matrix x to decompose and employs sparseness using

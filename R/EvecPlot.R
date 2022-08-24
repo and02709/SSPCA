@@ -1,12 +1,12 @@
-# This function provides visualization for the loadings of each eigenvector
-#   provided to the function.
-# @param Zlist this contains the eigenvectors
-# @param sepAnalysis tells whether the eigenvectors should be displayed separately
-# @param nresp number of response vectors present in datasets
-# @param resp.names gives list of names for each response
-# @keywords 
-# @export
-# @examples EvecPlot(Zlist, sepAnalysis, nresp, resp.names)
+#' This function provides visualization for the loadings of each eigenvector
+#'   provided to the function.
+#' @param Zlist this contains the eigenvectors
+#' @param sepAnalysis tells whether the eigenvectors should be displayed separately
+#' @param nresp number of response vectors present in datasets
+#' @param resp.names gives list of names for each response
+#' @keywords 
+#' @export
+#' @examples EvecPlot(Zlist, sepAnalysis, nresp, resp.names)
 
 EvecPlot <- function(Zlist, sepAnalysis, nresp, resp.names){
   if(sepAnalysis){

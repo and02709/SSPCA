@@ -1,16 +1,16 @@
-# This function provides a manhattan plot unique to CIFTI data
-# @param Zlist contains the eigenevectors corresponding to the loadings
-# @param sepAnalysis tells whether the eigenvectors should be displayed separately
-# @param nresp number of response vectors present in datasets
-# @param man.thresh flag for whether this is a manhattan plot
-# @param resp.names gives list of names for each response
-# @param specific.groups allows certain groups to be selected
-# @param exclude.groups allows certain groups to be excluded
-# @param color scheme for plot
-# @keywords 
-# @export
-# @examples CifManPlot(Zlist, sepAnalysis, nresp, man.thresh, resp.names, 
-#   specific.groups=NULL, exclude.groups=NULL, special.colors=NULL)
+#' This function provides a manhattan plot unique to CIFTI data
+#' @param Zlist contains the eigenevectors corresponding to the loadings
+#' @param sepAnalysis tells whether the eigenvectors should be displayed separately
+#' @param nresp number of response vectors present in datasets
+#' @param man.thresh flag for whether this is a manhattan plot
+#' @param resp.names gives list of names for each response
+#' @param specific.groups allows certain groups to be selected
+#' @param exclude.groups allows certain groups to be excluded
+#' @param color scheme for plot
+#' @keywords 
+#' @export
+#' @examples CifManPlot(Zlist, sepAnalysis, nresp, man.thresh, resp.names, 
+#'   specific.groups=NULL, exclude.groups=NULL, special.colors=NULL)
 
 
 CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names, 

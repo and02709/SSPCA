@@ -1,11 +1,11 @@
-# This function provides a QQ plot for the training and testing data
-# @param ytrain training response dataset
-# @param ytest testing response dataset
-# @param nresp number of response vectors present in datasets
-# @param resp.names gives list of names for each response
-# @keywords 
-# @export
-# @examples QQplot(ytrain, ytest, nresp, resp.names)
+#' This function provides a QQ plot for the training and testing data
+#' @param ytrain training response dataset
+#' @param ytest testing response dataset
+#' @param nresp number of response vectors present in datasets
+#' @param resp.names gives list of names for each response
+#' @keywords 
+#' @export
+#' @examples QQplot(ytrain, ytest, nresp, resp.names)
 
 QQplot <- function(ytrain, ytest, nresp, resp.names){
   

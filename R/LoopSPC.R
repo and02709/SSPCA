@@ -1,17 +1,17 @@
-# This function cycles through each response and computes supervised principal
-#     component analysis eigenvectors.  This is caused by doing separate analysis.
-# @param ytrain training response dataset
-# @param xtrain training predictor dataset
-# @param ytest testing response dataset
-# @param xtest testing predictor dataset
-# @param ycont flag indicates response data is continuous
-# @param nresp number of response vectors present in datasets
-# @param strictEV flag whether to impose strict requiresments to accept number
-#   of eigenevectors or to select a more appropriate number
-# @param nTopEvecs number of desired eigenevectors
-# @keywords 
-# @export
-# @examples LoopSPC(ytrain, xtrain, ytest, xtest, ycont, nresp, strictEV, nTopEvecs)
+#' This function cycles through each response and computes supervised principal
+#'     component analysis eigenvectors.  This is caused by doing separate analysis.
+#' @param ytrain training response dataset
+#' @param xtrain training predictor dataset
+#' @param ytest testing response dataset
+#' @param xtest testing predictor dataset
+#' @param ycont flag indicates response data is continuous
+#' @param nresp number of response vectors present in datasets
+#' @param strictEV flag whether to impose strict requiresments to accept number
+#'   of eigenevectors or to select a more appropriate number
+#' @param nTopEvecs number of desired eigenevectors
+#' @keywords 
+#' @export
+#' @examples LoopSPC(ytrain, xtrain, ytest, xtest, ycont, nresp, strictEV, nTopEvecs)
 
 LoopSPC <- function(ytrain, xtrain, ytest, xtest, ycont, nresp, strictEV, nTopEvecs){
   

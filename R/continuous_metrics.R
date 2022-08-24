@@ -1,12 +1,12 @@
-# This function calculates the performance metrics for each continuous response.
-# @param ytrain training response dataset
-# @param ytest testing response dataset
-# @param y_hat fitted/predicted values
-# @param nresp number of response vectors present in datasets
-# @param resp.names gives list of names for each response
-# @keywords 
-# @export
-# @examples continuous_metrics(ytrain, ytest, y_hat, nresp, resp.names)
+#' This function calculates the performance metrics for each continuous response.
+#' @param ytrain training response dataset
+#' @param ytest testing response dataset
+#' @param y_hat fitted/predicted values
+#' @param nresp number of response vectors present in datasets
+#' @param resp.names gives list of names for each response
+#' @keywords 
+#' @export
+#' @examples continuous_metrics(ytrain, ytest, y_hat, nresp, resp.names)
 
 continuous_metrics <- function(ytrain, ytest, y_hat, nresp, resp.names){
   y_hat_train <- y_hat[[1]]

@@ -1,10 +1,10 @@
-# This function converts the eigenecvectors into a new form.
-# @param Z contains eigenvectors
-# @param resp.names gives list of names for each response
-# @param nresp number of response vectors present in datasets
-# @keywords 
-# @export
-# @examples restructuring.func(Z, resp.names, nresp)
+#' This function converts the eigenecvectors into a new form.
+#' @param Z contains eigenvectors
+#' @param resp.names gives list of names for each response
+#' @param nresp number of response vectors present in datasets
+#' @keywords 
+#' @export
+#' @examples restructuring.func(Z, resp.names, nresp)
 
 restructuring.func <- function(Z, resp.names, nresp){
   if(length(Z)!=nresp) stop("Incorrect number of responses")

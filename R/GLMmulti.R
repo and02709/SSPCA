@@ -1,14 +1,14 @@
-# This function calculates predictions for each multinomial response using all
-#   eigenvectors together.
-# @param ytrain training response dataset
-# @param ztrain encoded training data
-# @param ytest testing response dataset
-# @param ztest encoded testing data
-# @param nresp number of response vectors present in datasets
-# @param resp.names gives list of names for each response
-# @keywords 
-# @export
-# @examples GLMmulti(ytrain, ztrain, ytest, ztest, nresp, resp.names)
+#' This function calculates predictions for each multinomial response using all
+#'   eigenvectors together.
+#' @param ytrain training response dataset
+#' @param ztrain encoded training data
+#' @param ytest testing response dataset
+#' @param ztest encoded testing data
+#' @param nresp number of response vectors present in datasets
+#' @param resp.names gives list of names for each response
+#' @keywords 
+#' @export
+#' @examples GLMmulti(ytrain, ztrain, ytest, ztest, nresp, resp.names)
 
 GLMmulti <- function(ytrain, ztrain, ytest, ztest, nresp, resp.names){
   

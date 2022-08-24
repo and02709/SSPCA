@@ -1,14 +1,14 @@
-# This extracts the desired number of eigenvectors from the X matrix
-# Performs svd on x matrix in one of two ways.  First is if ncol > nrows,
-# svd performed on x t(x), otherwise svd performed on t(x) x.  Also, if there
-# are too many missing values, svd is performed on just x
-# @param v proposed eigenvectors.  Usually set to NULL
-# @param x matrix to extract eigenvectors
-# @param K number of desired eigenvectors
-# @keywords
-# @export
-# @examples
-# CheckPMDV(v,x,K)
+#' This extracts the desired number of eigenvectors from the X matrix
+#' Performs svd on x matrix in one of two ways.  First is if ncol > nrows,
+#' svd performed on x t(x), otherwise svd performed on t(x) x.  Also, if there
+#' are too many missing values, svd is performed on just x
+#' @param v proposed eigenvectors.  Usually set to NULL
+#' @param x matrix to extract eigenvectors
+#' @param K number of desired eigenvectors
+#' @keywords
+#' @export
+#' @examples
+#' CheckPMDV(v,x,K)
 
 
 # Normally accepts the v eigenvector of loadings, x input matrix, and number

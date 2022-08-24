@@ -1,19 +1,19 @@
-# This function computes supervised principal component analysis.  It obtains
-#   the eigenevectors from the HSIC criterion and encodes the training and
-#   testing data
-# @param ytrain training response dataset
-# @param xtrain training predictor dataset
-# @param ytest testing response dataset
-# @param xtest testing predictor dataset
-# @param ycont flag indicates response data is continuous
-# @param ybinary flag indicates response data is binary
-# @param nresp number of response vectors present in datasets
-# @param strictEV flag whether to impose strict requiresments to accept number
-#   of eigenevectors or to select a more appropriate number
-# @param nTopEvecs number of desired eigenevectors
-# @keywords 
-# @export
-# @examples SPC(ytrain, xtrain, ytest, xtest, ycont, ybinary, nresp, strictEV, nTopEvecs)
+#' This function computes supervised principal component analysis.  It obtains
+#'   the eigenevectors from the HSIC criterion and encodes the training and
+#'   testing data
+#' @param ytrain training response dataset
+#' @param xtrain training predictor dataset
+#' @param ytest testing response dataset
+#' @param xtest testing predictor dataset
+#' @param ycont flag indicates response data is continuous
+#' @param ybinary flag indicates response data is binary
+#' @param nresp number of response vectors present in datasets
+#' @param strictEV flag whether to impose strict requiresments to accept number
+#'   of eigenevectors or to select a more appropriate number
+#' @param nTopEvecs number of desired eigenevectors
+#' @keywords 
+#' @export
+#' @examples SPC(ytrain, xtrain, ytest, xtest, ycont, ybinary, nresp, strictEV, nTopEvecs)
 
 
 

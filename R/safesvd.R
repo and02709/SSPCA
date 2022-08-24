@@ -1,14 +1,14 @@
-# A function that performs SVD
-# This function iterates 10 times to attempt to decompose a matrix
-# through the singular value decomposition.  If the function is unable
-# to decompose the matrix after 10 tries, it will construct a random matrix
-# using rnorm with the same dimensions as the original matrix.  This random
-# matrix will be decomposed using the SVD and returned to the user.
-# @param x  This parameter accepts the matrix to undergo SVD
-# @keywords
-# @export
-# #examples
-# safesvd(x)
+#' A function that performs SVD
+#' This function iterates 10 times to attempt to decompose a matrix
+#' through the singular value decomposition.  If the function is unable
+#' to decompose the matrix after 10 tries, it will construct a random matrix
+#' using rnorm with the same dimensions as the original matrix.  This random
+#' matrix will be decomposed using the SVD and returned to the user.
+#' @param x  This parameter accepts the matrix to undergo SVD
+#' @keywords
+#' @export
+#' #examples
+#' safesvd(x)
 
 safesvd <- function(x){
   # sets the index to iteratively attempt SVD

@@ -1,25 +1,25 @@
-# This function decomposes a matrix using singular value decomposition but 
-#   constructs the new u vectors such that they are orthogonal to the previous
-#   vectors
-# The resulting eigenvector corresponding to the loadings in then shrunk
-#   using an L1 penalty where the u vectors are orthogonal to previous u
-#   vectors.
-# @param x this is the matrix which is decomposed and the decomposition vectors
-#   corresponding to the loadings are shrunk
-# @param us this tells the us the previous u vectors for which we wish
-#   to construct new u vectors that are orthogonal
-# @param sumabsv this parameter determines by how much the decomposition vectors
-#   corresponding to the loadings
-# @param niter number of iterations to allow for convergence
-# @param trace option to deisplay potential warnings
-# @param v allows a particular loadings vector to be used
-# @param vpos allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel maxima using pmax
-# @param vneg allows the option to force the vector corresponding to 
-#   loadings to correspond to the parallel minima using pmin
-# @keywords 
-# @export
-# @examples SMDOrth(x, us, sumabsv=NULL, niter=20, trace=TRUE,v, vpos, vneg)
+#' This function decomposes a matrix using singular value decomposition but 
+#'   constructs the new u vectors such that they are orthogonal to the previous
+#'   vectors
+#' The resulting eigenvector corresponding to the loadings in then shrunk
+#'   using an L1 penalty where the u vectors are orthogonal to previous u
+#'   vectors.
+#' @param x this is the matrix which is decomposed and the decomposition vectors
+#'   corresponding to the loadings are shrunk
+#' @param us this tells the us the previous u vectors for which we wish
+#'   to construct new u vectors that are orthogonal
+#' @param sumabsv this parameter determines by how much the decomposition vectors
+#'   corresponding to the loadings
+#' @param niter number of iterations to allow for convergence
+#' @param trace option to deisplay potential warnings
+#' @param v allows a particular loadings vector to be used
+#' @param vpos allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel maxima using pmax
+#' @param vneg allows the option to force the vector corresponding to 
+#'   loadings to correspond to the parallel minima using pmin
+#' @keywords 
+#' @export
+#' @examples SMDOrth(x, us, sumabsv=NULL, niter=20, trace=TRUE,v, vpos, vneg)
 
 # Function accepts the matrix x to decompose and employs sparseness using
 #   L1 penalty on the vectors corresponding the loadings

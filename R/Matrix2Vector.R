@@ -1,11 +1,11 @@
-# This function converts pconn data matrix into a vector
-# @param pconn_data accepts the pconn data matrix
-# @param pconn_vector accepts the pconn data in vector form
-# @param direction coded to convert matrix into vector
-# @keywords
-# @export
-# @examples
-# Matrix2Vector(pconn_data=NULL,pconn_vector=NULL,direction="to_vector")
+#' This function converts pconn data matrix into a vector
+#' @param pconn_data accepts the pconn data matrix
+#' @param pconn_vector accepts the pconn data in vector form
+#' @param direction coded to convert matrix into vector
+#' @keywords
+#' @export
+#' @examples
+#' Matrix2Vector(pconn_data=NULL,pconn_vector=NULL,direction="to_vector")
 
 # Function pconn data into either matrix or vector form
 Matrix2Vector <- function(pconn_data=NULL,pconn_vector=NULL,direction="to_vector") {
