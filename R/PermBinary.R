@@ -1,7 +1,7 @@
 #' This function caclulates all possible response permutations for a series
 #' of binary response variables
 #' @param n the number of binary responses
-#' @keywords
+#' @keywords permutation binary
 #' @export
 #' @examples
 #' PermBinary(n)

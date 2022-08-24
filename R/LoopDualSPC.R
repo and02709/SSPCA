@@ -10,7 +10,7 @@
 #' @param strictEV flag whether to impose strict requiresments to accept number
 #'   of eigenevectors or to select a more appropriate number
 #' @param nTopEvecs number of desired eigenevectors
-#' @keywords 
+#' @keywords individual response dual supervised principal component analysis
 #' @export
 #' @examples LoopDualSPC(ytrain, xtrain, ytest, xtest, ycont, nresp, strictEV, nTopEvecs)
 

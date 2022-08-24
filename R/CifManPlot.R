@@ -7,7 +7,7 @@
 #' @param specific.groups allows certain groups to be selected
 #' @param exclude.groups allows certain groups to be excluded
 #' @param color scheme for plot
-#' @keywords 
+#' @keywords CIFTI manhattan plot
 #' @export
 #' @examples CifManPlot(Zlist, sepAnalysis, nresp, man.thresh, resp.names, 
 #'   specific.groups=NULL, exclude.groups=NULL, special.colors=NULL)

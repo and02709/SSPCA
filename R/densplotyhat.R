@@ -2,7 +2,7 @@
 #' @param y_hat this contains the fitted/predicted responses
 #' @param nresp number of response vectors present in datasets
 #' @param resp.names gives list of names for each response
-#' @keywords 
+#' @keywords density plot fitted
 #' @export
 #' @examples densplotyhat(y_hat, nresp, resp.names)
 

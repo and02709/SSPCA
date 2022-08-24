@@ -128,3 +128,4 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL,
   trace=TRUE, v=NULL, center=TRUE, test_metrics=T,
   cnames=NULL, vpos=FALSE, vneg=FALSE, compute.pve=TRUE)
 }
+\keyword{Omni}

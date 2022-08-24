@@ -5,7 +5,7 @@
 #' @param v proposed eigenvectors.  Usually set to NULL
 #' @param x matrix to extract eigenvectors
 #' @param K number of desired eigenvectors
-#' @keywords
+#' @keywords penalized matrix decomposition
 #' @export
 #' @examples
 #' CheckPMDV(v,x,K)

@@ -3,7 +3,7 @@
 #' If the l2 norm is zero, this function then returns a value of 0.05 
 #' so as not to result in a division by zero
 #' @param vec Vector from which to calculate l2 norm
-#' @keywords
+#' @keywords l2 norm
 #' @export
 #' @examples
 #' l2n(vec)

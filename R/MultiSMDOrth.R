@@ -19,7 +19,7 @@
 #'   loadings to correspond to the parallel maxima using pmax
 #' @param vneg allows the option to force the vector corresponding to 
 #'   loadings to correspond to the parallel minima using pmin
-#' @keywords 
+#' @keywords multiple singular matrix orthogonal
 #' @export
 #' @examples MultiSMDOrth(x,sumabsu,sumabsv,niter,K, trace, v, vpos, vneg)
 

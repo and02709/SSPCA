@@ -4,7 +4,7 @@
 #' @param sepAnalysis tells whether the eigenvectors should be displayed separately
 #' @param nresp number of response vectors present in datasets
 #' @param resp.names gives list of names for each response
-#' @keywords 
+#' @keywords eigenvector plot
 #' @export
 #' @examples EvecPlot(Zlist, sepAnalysis, nresp, resp.names)
 

@@ -6,7 +6,7 @@
 #' @param ztest encoded testing data
 #' @param nresp number of response vectors present in datasets
 #' @param resp.names gives list of names for each response
-#' @keywords 
+#' @keywords GLM multinomial
 #' @export
 #' @examples GLMmulti(ytrain, ztrain, ytest, ztest, nresp, resp.names)
 

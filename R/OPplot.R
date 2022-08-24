@@ -5,7 +5,7 @@
 #' @param yhat this is the fitted data to be compared to the training and testing
 #' @param nresp number of response vectors present in datasets
 #' @param resp.names gives list of names for each response
-#' @keywords 
+#' @keywords observed predicted plot
 #' @export
 #' @examples QQplot(ytrain, ytest, nresp, resp.names)
 

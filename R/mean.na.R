@@ -1,7 +1,7 @@
 #' A function that calculates the mean value of all non-missing values
 #' of a vector
 #' @param vec vector in which to calculate the mean of non-missing values
-#' @keywords
+#' @keywords mean missing
 #' @export
 #' @examples
 #' mean.na(vec)

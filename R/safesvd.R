@@ -5,9 +5,9 @@
 #' using rnorm with the same dimensions as the original matrix.  This random
 #' matrix will be decomposed using the SVD and returned to the user.
 #' @param x  This parameter accepts the matrix to undergo SVD
-#' @keywords
+#' @keywords singular value decomposition
 #' @export
-#' #examples
+#' @examples
 #' safesvd(x)
 
 safesvd <- function(x){

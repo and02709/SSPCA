@@ -18,7 +18,7 @@
 #'   loadings to correspond to the parallel maxima using pmax
 #' @param vneg allows the option to force the vector corresponding to 
 #'   loadings to correspond to the parallel minima using pmin
-#' @keywords 
+#' @keywords singular matrix
 #' @export
 #' @examples SMD(x, sumabsu, sumabsv, niter=20,trace=TRUE, v, upos, uneg, vpos, vneg)
 

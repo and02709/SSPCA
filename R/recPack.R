@@ -1,6 +1,6 @@
 #' This function assigns a category based on binary response permutation
 #' @param ytrain accepts matrix of response variables
-#' @keywords
+#' @keywords reorder 
 #' @export
 #' @examples
 #' recPack(ytrain)

@@ -13,7 +13,7 @@
 #'   MultiSMDOrth functions.  Its default is set to null because
 #'   CheckPMDV is called in this function
 #' @param trace option to deisplay potential warnings
-#' @paaram orth specifies that MultiSMDOrth is to be called for any number of 
+#' @param orth specifies that MultiSMDOrth is to be called for any number of 
 #'   vectors that is greater than 1
 #' @param center this tells the algorithm whether centering is required
 #'   this has been handled in other programs so has been disabled
@@ -27,7 +27,7 @@
 #'   loadings to correspond to the parallel maxima using pmax
 #' @param vneg allows the option to force the vector corresponding to 
 #'   loadings to correspond to the parallel minima using pmin
-#' @keywords 
+#' @keywords partial matrix decomposition
 #' @export
 #' @examples PMDL1(x,sumabs=.4,sumabsu=NULL,sumabsv=NULL,niter=20,
 #'   K=1,v=NULL, trace=TRUE, orth=TRUE, center=TRUE, rnames=NULL, cnames=NULL, 

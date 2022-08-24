@@ -29,7 +29,7 @@
 #' @param compute.pve no longer useful
 #' @param strictEV determines whether the specified K must be strictly followed
 #'   or whether a more appropriate number of vectors can be used
-#' @keywords 
+#' @keywords sparse supervised principal component analysis
 #' @export
 #' @examples SSPC(xtrain, ytrain, xtest, ycont, ybinary, nresp, sumabsv=4, 
 #'   niter=20, K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, cnames=NULL, 

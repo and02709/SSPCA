@@ -2,7 +2,7 @@
 #' @param pconn_data accepts the pconn data matrix
 #' @param pconn_vector accepts the pconn data in vector form
 #' @param direction coded to convert matrix into vector
-#' @keywords
+#' @keywords pconn matrix vector
 #' @export
 #' @examples
 #' Matrix2Vector(pconn_data=NULL,pconn_vector=NULL,direction="to_vector")

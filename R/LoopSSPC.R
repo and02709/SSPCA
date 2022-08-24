@@ -20,7 +20,7 @@
 #' @param compute.pve computes cv using missing values
 #' @param strictEV flag whether to impose strict requiresments to accept number
 #'   of eigenevectors or to select a more appropriate number
-#' @keywords 
+#' @keywords indiviual sparse supervised principal component analysis
 #' @export
 #' @examples LoopSSPC(xtrain, ytrain, xtest, ycont, nresp, sumabsv=4, niter=20, 
 #'   K=1, orth=TRUE, trace=TRUE, v=NULL, center=FALSE, 

@@ -4,7 +4,7 @@
 #' @param Z encoded pca responses
 #' @param nresp number of response vectors present in datasets
 #' @param resp.names gives list of names for each response
-#' @keywords 
+#' @keywords GLM multinomial separate
 #' @export
 #' @examples GLMmultiSep(ytrain, ytest, Z, nresp, resp.names)
 

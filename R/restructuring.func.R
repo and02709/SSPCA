@@ -2,7 +2,7 @@
 #' @param Z contains eigenvectors
 #' @param resp.names gives list of names for each response
 #' @param nresp number of response vectors present in datasets
-#' @keywords 
+#' @keywords restructuring
 #' @export
 #' @examples restructuring.func(Z, resp.names, nresp)
 

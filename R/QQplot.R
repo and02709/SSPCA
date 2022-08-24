@@ -3,7 +3,7 @@
 #' @param ytest testing response dataset
 #' @param nresp number of response vectors present in datasets
 #' @param resp.names gives list of names for each response
-#' @keywords 
+#' @keywords predicted response QQ
 #' @export
 #' @examples QQplot(ytrain, ytest, nresp, resp.names)
 

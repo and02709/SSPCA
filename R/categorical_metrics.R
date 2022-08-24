@@ -4,7 +4,7 @@
 #' @param y_hat fitted/predicted values
 #' @param nresp number of response vectors present in datasets
 #' @param resp.names gives list of names for each response
-#' @keywords 
+#' @keywords categorical metrics
 #' @export
 #' @examples categorical_metrics(ytrain, ytest, y_hat, nresp, resp.names)
 

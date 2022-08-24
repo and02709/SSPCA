@@ -5,7 +5,7 @@
 #' @param ytest testing response dataset
 #' @param ztest encoded testing data
 #' @param nresp number of response vectors present in datasets
-#' @keywords 
+#' @keywords GLM binary
 #' @export
 #' @examples GLMbin(ytrain, ztrain, ytest, ztest, nresp)
 

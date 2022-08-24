@@ -36,7 +36,7 @@
 #' @param vpos this determines whether the matrix is to be positive only
 #' @param vneg this determines whether the matrix is to be negative only
 #' @param compute.pve computes cv using missing values
-#' @keywords 
+#' @keywords Omni
 #' @export
 #' @examples OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, 
 #'   ycont=T, ybinary=F, sepAnalysis = F, 
