@@ -39,3 +39,4 @@ BinarySearch <- function(argu,sumabs){
   warning("Didn't quite converge")
   return((lam1+lam2)/2)
 }
+

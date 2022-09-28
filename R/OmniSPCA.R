@@ -54,14 +54,16 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
                      sepclass=T, binClassCombine=F, NoExtraEV = F, ydensity=F,
                      dpyhat=F, dsq=F, qqplot=F, opplot=F, 
                      Evec.plot = F, manhattan.plot=F, cifti.man.plot=F, 
-                     man.thresh = 0, niter=20, orth=TRUE, 
+                     man.thresh = 0, specific.groups=NULL, exclude.groups=NULL, 
+                     special.colors=NULL, 
+                     niter=20, orth=TRUE, 
                      trace=TRUE, v=NULL, center=TRUE, test_metrics=T,
                      cnames=NULL, vpos=FALSE, vneg=FALSE, compute.pve=TRUE){
   
-  if(is_tibble(ytrain) || is_tibble(ytest)){
-    ytrain <- as.matrix(ytrain)
-    ytest <- as.matrix(ytest)
-  }
+  
+  ytrain <- as.matrix(ytrain)
+  ytest <- as.matrix(ytest)
+  
   
   
   
@@ -85,9 +87,7 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
     xtest <- xtest-xmeans
   }
   
-  nobs <- nrow(xtrain)
-  npred <- ncol(xtrain)
-  nresp <- ncol(ytrain)
+  
   Dual <- ifelse(npred>nobs, TRUE, FALSE)
   
   if(sepAnalysis){
@@ -183,7 +183,9 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
   }
   if(cifti.man.plot){
     if(npred != 61776) stop("Wrong number of predictors for a CIFTI format")
-    Cifti.manhattan.plot <- CifManPlot(Zlist=Z, sepAnalysis=sepAnalysis, nresp=nresp, man.thresh=man.thresh, resp.names=resp.names)
+    Cifti.manhattan.plot <- CifManPlot(Zlist=Z, sepAnalysis=sepAnalysis, nresp=nresp, man.thresh=man.thresh, 
+                                       resp.names=resp.names, specific.groups=specific.groups, exclude.groups=exclude.groups, 
+                                       special.colors=special.colors)
   }
   else{
     Cifti.manhattan.plot <- NULL
@@ -219,8 +221,16 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
     OP.list <- NULL
   }
   
+  if(sepAnalysis){
+    Z_restructured <- restructuring.func(Z=Z, resp.names=resp.names, nresp=nresp)
+    Z <- Z_restructured
+  }
   
   
-  return(list(Z, y_hat, TrTs, plot.list, man.plot.list, Cifti.manhattan.plot, y.density.list, yhat.density.list, ysq.density.list, QQ.list))  
+  
+  return(list(Z.U.lambda=Z, y.hat=y_hat, metrics=TrTs, plot.list=plot.list, man.plot.list=man.plot.list, 
+              Cifti.manhattan.plot=Cifti.manhattan.plot, y.density.list=y.density.list, 
+              yhat.density.list=yhat.density.list, ysq.density.list=ysq.density.list, 
+              QQ.list=QQ.list))  
   
 }
