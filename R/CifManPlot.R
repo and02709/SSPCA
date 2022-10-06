@@ -24,7 +24,13 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
       Umat <- as.matrix(hold.U)
       num.vec <- ncol(Umat)
       num.load <- nrow(Umat)
-      dftemp <- read.table("ROI.txt", header=T)
+      #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/inst/extdata/ROI.txt", header=T)
+      #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/extdata/ROI.txt", header=T)
+      #fpath <- system.file("extdata", "ROI.txt", package="SSPCA")
+      fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
+      #fpath <- "SSPCA/inst/ROI.txt"
+      dftemp <- read.table(file=fpath, header=T)
+      
       dftemp$group <- as.factor(dftemp$group)
       
       if(!is.null(special.colors)){
@@ -103,7 +109,11 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
           dplyr::mutate(ylim = (max(U) + 0.2*max(U))) %>% 
           dplyr::pull(ylim)
         
-        fname <- paste0(resp.names, " Manhattan Cifti Eigenvector ", j, ".png")
+        #name_img <- paste0(resp.names, " Manhattan Cifti Eigenvector ", j, ".png")
+        #wd <- getwd()
+        #fname <- file.path(wd, "outputfolder", name_img)
+        fname <- paste0("outputfolder/",resp.names, " Manhattan Cifti Eigenvector ", j, ".png")
+        
         if(j==1){
           plot.list <- list(fname)
         }
@@ -183,7 +193,12 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
         Umat <- as.matrix(hold.U)
         num.vec <- ncol(Umat)
         num.load <- nrow(Umat)
-        dftemp <- read.table("ROI.txt", header=T)
+        #dftemp <- read.table("ROI.txt", header=T)
+        #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/inst/ROI.txt", header=T)
+        #fpath <- system.file("extdata", "ROI.txt", package="SSPCA")
+        fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
+        #fpath <- "SSPCA/inst/ROI.txt"
+        dftemp <- read.table(file=fpath, header=T)
         dftemp$group <- as.factor(dftemp$group)
         
         if(!is.null(special.colors)){
@@ -263,7 +278,10 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
             dplyr::mutate(ylim = (max(U) + 0.2*max(U))) %>% 
             dplyr::pull(ylim)
           
-          fname <- paste0(resp.names[i], " Manhattan Cifti Eigenvector ", j, ".png")
+          #name_img <- paste0(resp.names[i], " Manhattan Cifti Eigenvector ", j, ".png")
+          #wd <- getwd()
+          #fname <- file.path(wd, "outputfolder", name_img)
+          fname <- paste0("outputfolder/",resp.names[i], " Manhattan Cifti Eigenvector ", j, ".png")
           if(i==1 && j==1){
             plot.list <- list(fname)
           }
@@ -349,7 +367,12 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
     
     
     # use existing mapping file.
-    dftemp <- read.table("ROI.txt", header=TRUE)
+    #dftemp <- read.table("ROI.txt", header=TRUE)
+    #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/inst/ROI.txt", header=T)
+    #fpath <- system.file("extdata", "ROI.txt", package="SSPCA")
+    fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
+    #fpath <- "SSPCA/inst/ROI.txt"
+    dftemp <- read.table(file=fpath, header=T)
     dftemp$group <- as.factor(dftemp$group)
     
     if(!is.null(special.colors)){
@@ -435,7 +458,11 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
         dplyr::mutate(ylim = (max(U) + 0.2*max(U))) %>% 
         dplyr::pull(ylim)
       
-      fname <- paste0("Manhattan Cifti Eigenvector ", j, ".png")
+      #name_img <- paste0("Manhattan Cifti Eigenvector ", j, ".png")
+      #wd <- getwd()
+      #fname <- file.path(wd, "outputfolder", name_img)
+      fname <- paste0("outputfolder/","Manhattan Cifti Eigenvector ", j, ".png")
+      
       if(j==1){
         plot.list <- list(fname)
       }

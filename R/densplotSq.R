@@ -23,7 +23,7 @@ densplotSq <- function(TrTs, nresp, resp.names){
     
     dftemp <- data.frame(yhat=y.tr)
     
-    fname <- paste0("Sqare Error ", resp.names[i], " train density.png")
+    fname <- paste0("outputfolder/Sqare Error ", resp.names[i], " train density.png")
     if(i==1){
       plot.list <- list(fname)
     }
@@ -45,7 +45,7 @@ densplotSq <- function(TrTs, nresp, resp.names){
     
     dftemp <- data.frame(yhat=y.ts)
     
-    fname <- paste0("Sqare Error ", resp.names[i], " test density.png")
+    fname <- paste0("outputfolder/Sqare Error ", resp.names[i], " test density.png")
     
     plot.list <- append(plot.list, list(fname))
     

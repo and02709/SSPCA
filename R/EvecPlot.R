@@ -27,7 +27,7 @@ EvecPlot <- function(Zlist, sepAnalysis, nresp, resp.names){
           dftemp <- data.frame(xvar=c(1:num.load),yvar=Umat[,j])
         }
         
-        fname <- paste0(resp.names, " Eigenvector ", j, ".png")
+        fname <- paste0("outputfolder/",resp.names, " Eigenvector ", j, ".png")
         if(j==1){
           plot.list <- list(fname)
         }
@@ -69,7 +69,7 @@ EvecPlot <- function(Zlist, sepAnalysis, nresp, resp.names){
             dftemp <- data.frame(xvar=c(1:num.load),yvar=Umat[,j])
           }
           
-          fname <- paste0(resp.names[i], " Eigenvector ", j, ".png")
+          fname <- paste0("outputfolder/",resp.names[i], " Eigenvector ", j, ".png")
           if(i==1 && j==1){
             plot.list <- list(fname)
           }
@@ -108,7 +108,7 @@ EvecPlot <- function(Zlist, sepAnalysis, nresp, resp.names){
         dftemp <- data.frame(xvar=c(1:num.load),yvar=Umat[,j])
       }
       
-      fname <- paste0("Eigenvector_", j, ".png")
+      fname <- paste0("outputfolder/Eigenvector_", j, ".png")
       if(j==1){
         plot.list <- list(fname)
       }

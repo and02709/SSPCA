@@ -22,7 +22,7 @@ QQplot <- function(ytrain, ytest, nresp, resp.names){
     
     dftemp <- data.frame(y=y.tr)
     
-    fname <- paste0("QQ ", resp.names[i], " train.png")
+    fname <- paste0("outputfolder/QQ ", resp.names[i], " train.png")
     if(i==1){
       plot.list <- list(fname)
     }
@@ -45,7 +45,7 @@ QQplot <- function(ytrain, ytest, nresp, resp.names){
     
     dftemp <- data.frame(y=y.ts)
     
-    fname <- paste0("QQ ", resp.names[i], " test.png")
+    fname <- paste0("outputfolder/QQ ", resp.names[i], " test.png")
     
     plot.list <- append(plot.list, list(fname))
     
