@@ -27,8 +27,8 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
       #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/inst/extdata/ROI.txt", header=T)
       #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/extdata/ROI.txt", header=T)
       #fpath <- system.file("extdata", "ROI.txt", package="SSPCA")
-      fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
-      #fpath <- "SSPCA/inst/ROI.txt"
+      #fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
+      fpath <- "SSPCA/inst/ROI.txt"
       dftemp <- read.table(file=fpath, header=T)
       
       dftemp$group <- as.factor(dftemp$group)
@@ -196,8 +196,8 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
         #dftemp <- read.table("ROI.txt", header=T)
         #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/inst/ROI.txt", header=T)
         #fpath <- system.file("extdata", "ROI.txt", package="SSPCA")
-        fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
-        #fpath <- "SSPCA/inst/ROI.txt"
+        #fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
+        fpath <- "SSPCA/inst/ROI.txt"
         dftemp <- read.table(file=fpath, header=T)
         dftemp$group <- as.factor(dftemp$group)
         
@@ -370,8 +370,8 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
     #dftemp <- read.table("ROI.txt", header=TRUE)
     #dftemp <- read.table(file=paste0(path.package("SSPCA"),"/inst/ROI.txt", header=T)
     #fpath <- system.file("extdata", "ROI.txt", package="SSPCA")
-    fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
-    #fpath <- "SSPCA/inst/ROI.txt"
+    #fpath <- "SSPCAtemp/SSPCA/inst/ROI.txt"
+    fpath <- "SSPCA/inst/ROI.txt"
     dftemp <- read.table(file=fpath, header=T)
     dftemp$group <- as.factor(dftemp$group)
     
