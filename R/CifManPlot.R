@@ -1,4 +1,6 @@
 #' This function provides a manhattan plot unique to CIFTI data
+#' Function needs to load ROI.txt file to plot things correctly
+#' 
 #' @param Zlist contains the eigenevectors corresponding to the loadings
 #' @param sepAnalysis tells whether the eigenvectors should be displayed separately
 #' @param nresp number of response vectors present in datasets
