@@ -22,7 +22,7 @@ ydens<- function(ytrain, ytest, nresp, resp.names){
     
     dftemp <- data.frame(y=y.tr)
     
-    fname <- paste0("outputfolder/",resp.names[i], " train density.png")
+    fname <- paste0("/outputfolder/",resp.names[i], " train density.png")
     if(i==1){
       plot.list <- list(fname)
     }
@@ -44,7 +44,7 @@ ydens<- function(ytrain, ytest, nresp, resp.names){
     
     dftemp <- data.frame(y=y.ts)
     
-    fname <- paste0("outputfolder/",resp.names[i], " test density.png")
+    fname <- paste0("/outputfolder/",resp.names[i], " test density.png")
     
     plot.list <- append(plot.list, list(fname))
     

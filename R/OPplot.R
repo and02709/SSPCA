@@ -30,7 +30,7 @@ OPplot <- function(ytrain, ytest, yhat, nresp, resp.names){
     
     dftemp <- data.frame(y=y.tr, yhat=y.hat.tr)
     
-    fname <- paste0("outputfolder/Observed vs Predicted ", resp.names[i], " train.png")
+    fname <- paste0("/outputfolder/Observed vs Predicted ", resp.names[i], " train.png")
     if(i==1){
       plot.list <- list(fname)
     }
@@ -55,7 +55,7 @@ OPplot <- function(ytrain, ytest, yhat, nresp, resp.names){
     
     dftemp <- data.frame(y=y.ts, yhat=y.hat.ts)
     
-    fname <- paste0("outputfolder/Observed vs Predicted ", resp.names[i], " test.png")
+    fname <- paste0("/outputfolder/Observed vs Predicted ", resp.names[i], " test.png")
     
     plot.list <- append(plot.list, list(fname))
     

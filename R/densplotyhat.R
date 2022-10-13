@@ -22,7 +22,7 @@ densplotyhat<- function(y_hat, nresp, resp.names){
     
     dftemp <- data.frame(yhat=y.tr)
     
-    fname <- paste0("outputfolder/Fitted ", resp.names[i], " train density.png")
+    fname <- paste0("/outputfolder/Fitted ", resp.names[i], " train density.png")
     if(i==1){
       plot.list <- list(fname)
     }
@@ -44,7 +44,7 @@ densplotyhat<- function(y_hat, nresp, resp.names){
     
     dftemp <- data.frame(yhat=y.ts)
     
-    fname <- paste0("outputfolder/Fitted ", resp.names[i], " test density.png")
+    fname <- paste0("/outputfolder/Fitted ", resp.names[i], " test density.png")
     
     plot.list <- append(plot.list, list(fname))
     

@@ -27,7 +27,7 @@ ManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names){
           dftemp <- data.frame(xvar=c(1:num.load),yvar=abs(Umat[,j]))
         }
         
-        fname <- paste0("outputfolder/",resp.names, " Manhattan_Eigenvector ", j, ".png")
+        fname <- paste0("/outputfolder/",resp.names, " Manhattan_Eigenvector ", j, ".png")
         if(j==1){
           plot.list <- list(fname)
         }
@@ -85,7 +85,7 @@ ManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names){
             dftemp <- data.frame(xvar=c(1:num.load),yvar=abs(Umat[,j]))
           }
           
-          fname <- paste0("outputfolder/",resp.names[i], " Manhattan Eigenvector ", j, ".png")
+          fname <- paste0("/outputfolder/",resp.names[i], " Manhattan Eigenvector ", j, ".png")
           if(i==1 && j==1){
             plot.list <- list(fname)
           }
@@ -139,7 +139,7 @@ ManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names){
         dftemp <- data.frame(xvar=c(1:num.load),yvar=abs(Umat[,j]))
       }
       
-      fname <- paste0("outputfolder/Manhattan_Eigenvector_", j, ".png")
+      fname <- paste0("/outputfolder/Manhattan_Eigenvector_", j, ".png")
       if(j==1){
         plot.list <- list(fname)
       }

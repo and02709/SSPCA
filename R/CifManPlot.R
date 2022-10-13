@@ -114,7 +114,7 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
         #name_img <- paste0(resp.names, " Manhattan Cifti Eigenvector ", j, ".png")
         #wd <- getwd()
         #fname <- file.path(wd, "outputfolder", name_img)
-        fname <- paste0("outputfolder/",resp.names, " Manhattan Cifti Eigenvector ", j, ".png")
+        fname <- paste0("/outputfolder/",resp.names, " Manhattan Cifti Eigenvector ", j, ".png")
         
         if(j==1){
           plot.list <- list(fname)
@@ -283,7 +283,7 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
           #name_img <- paste0(resp.names[i], " Manhattan Cifti Eigenvector ", j, ".png")
           #wd <- getwd()
           #fname <- file.path(wd, "outputfolder", name_img)
-          fname <- paste0("outputfolder/",resp.names[i], " Manhattan Cifti Eigenvector ", j, ".png")
+          fname <- paste0("/outputfolder/",resp.names[i], " Manhattan Cifti Eigenvector ", j, ".png")
           if(i==1 && j==1){
             plot.list <- list(fname)
           }
@@ -463,7 +463,7 @@ CifManPlot <- function(Zlist, sepAnalysis, nresp, man.thresh, resp.names,
       #name_img <- paste0("Manhattan Cifti Eigenvector ", j, ".png")
       #wd <- getwd()
       #fname <- file.path(wd, "outputfolder", name_img)
-      fname <- paste0("outputfolder/","Manhattan Cifti Eigenvector ", j, ".png")
+      fname <- paste0("/outputfolder/","Manhattan Cifti Eigenvector ", j, ".png")
       
       if(j==1){
         plot.list <- list(fname)
