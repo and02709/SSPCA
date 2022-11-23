@@ -24,6 +24,7 @@
 #' @param Evec.plot generates eigenevector plot
 #' @param manhattan.plot generates basic manhattan plot
 #' @param cifti.man.plot generates cifti specific manhattan plot
+#' @param vol.man.plot generates brain volume specific manhattan plot
 #' @param man.thresh visual horizontal bar for manhattan plot
 #' @param nresp number of response vectors present in datasets
 #' @param niter number of iterations
@@ -54,6 +55,7 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
                      sepclass=T, binClassCombine=F, NoExtraEV = F, ydensity=F,
                      dpyhat=F, dsq=F, qqplot=F, opplot=F, 
                      Evec.plot = F, manhattan.plot=F, cifti.man.plot=F, 
+                     vol.man.plot=F,
                      man.thresh = 0, specific.groups=NULL, exclude.groups=NULL, 
                      special.colors=NULL, 
                      niter=20, orth=TRUE, 
@@ -63,6 +65,11 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
   
   ytrain <- as.matrix(ytrain)
   ytest <- as.matrix(ytest)
+  
+  if(dim(as.matrix(xtrain))[[1]]==1 && dim(as.matrix(xtest))[[1]]==1){
+    xtrain <- t(xtrain)
+    xtest <- t(xtest)
+  }
   
   
   
@@ -83,10 +90,14 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
   
   if(center){
     xmeans <- colMeans(xtrain)
-    xtrain <- xtrain-xmeans
-    xtest <- xtest-xmeans
+    xtrain <- t(apply(xtrain, 1, function(x) x-xmeans))
+    xtest <- t(apply(xtest, 1, function(x) x-xmeans))
   }
   
+  if(dim(as.matrix(xtrain))[[1]]==1 && dim(as.matrix(xtest))[[1]]==1){
+    xtrain <- t(xtrain)
+    xtest <- t(xtest)
+  }
   
   Dual <- ifelse(npred>nobs, TRUE, FALSE)
   
@@ -190,6 +201,15 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
   else{
     Cifti.manhattan.plot <- NULL
   }
+  if(vol.man.plot){
+    if(npred != 379) stop("Wrong number of predictors for a volume format")
+    Vol.manhattan.plot <- VManPlot(Zlist=Z, sepAnalysis=sepAnalysis, nresp=nresp, man.thresh=man.thresh, 
+                                       resp.names=resp.names, specific.groups=specific.groups, exclude.groups=exclude.groups, 
+                                       special.colors=special.colors)
+  }
+  else{
+    Vol.manhattan.plot <- NULL
+  }
   if(ydensity && ycont){
     y.density.list <- ydens(ytrain=ytrain, ytest=ytest, nresp=nresp, resp.names=resp.names)
   }
@@ -229,7 +249,8 @@ OmniSPCA <- function(xtrain, ytrain, xtest, ytest, resp.names = NULL, ycont=T, y
   
   
   return(list(Z.U.lambda=Z, y.hat=y_hat, metrics=TrTs, plot.list=plot.list, man.plot.list=man.plot.list, 
-              Cifti.manhattan.plot=Cifti.manhattan.plot, y.density.list=y.density.list, 
+              Cifti.manhattan.plot=Cifti.manhattan.plot, Vol.manhattan.plot=Vol.manhattan.plot,
+              y.density.list=y.density.list, 
               yhat.density.list=yhat.density.list, ysq.density.list=ysq.density.list, 
               QQ.list=QQ.list))  
   
